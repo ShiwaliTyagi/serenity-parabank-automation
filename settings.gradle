@@ -1,0 +1,12 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        mavenCentral()
+        maven { url "https://plugins.gradle.org/m2/" }
+    }
+}
+/*This is crucial — it tells Gradle where to
+find the plugin when you use the modern plugins {} block in build.gradle.*/
+rootProject.name = 'serenity-parabank-automation'
+
+

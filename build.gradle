@@ -1,0 +1,38 @@
+plugins {
+    id 'java'
+    id 'io.freefair.lombok' version '8.0.1'
+    id 'net.serenity-bdd.serenity-gradle-plugin' version '4.2.16'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+}
+
+group = 'com.parabank.automation'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven { url "https://plugins.gradle.org/m2/" }
+}
+
+dependencies {
+    // Serenity BDD dependencies
+    implementation 'net.serenity-bdd:serenity-core:4.2.16'
+    implementation 'net.serenity-bdd:serenity-screenplay:4.2.16'
+    implementation 'net.serenity-bdd:serenity-screenplay-webdriver:4.2.16'
+    implementation 'net.serenity-bdd:serenity-cucumber:4.2.16'
+    testImplementation 'io.github.bonigarcia:webdrivermanager:5.7.0'
+
+    testImplementation 'junit:junit:4.13.2' // ← Add this (JUnit 4)
+    testImplementation 'io.cucumber:cucumber-java:7.14.0'
+    testImplementation 'io.cucumber:cucumber-junit:7.14.0' // ← Add this (JUnit 4 Cucumber)
+
+    // Additional dependencies
+    testImplementation 'org.assertj:assertj-core:3.25.3'
+    testImplementation 'org.slf4j:slf4j-simple:2.0.13'
+
+}
+
+
