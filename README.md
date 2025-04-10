@@ -11,7 +11,9 @@ This is an automated test framework built with **Serenity BDD**, **Gradle**, and
 - Gradle build system
 
 ## 🗂️ Project Structure 
+## 📁 Project Structure
 
+```
 serenity-parabank-automation/
 ├── build.gradle
 ├── serenity.properties
@@ -29,8 +31,7 @@ serenity-parabank-automation/
 │       │       └── tasks/           ← Screenplay tasks
 │       └── resources/
 │           └── features/            ← .feature files
-
----
+```
 
 ## 🚀 Getting Started
 
