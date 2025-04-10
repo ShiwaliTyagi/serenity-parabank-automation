@@ -10,7 +10,27 @@ This is an automated test framework built with **Serenity BDD**, **Gradle**, and
 - Easily configurable via `serenity.properties`
 - Gradle build system
 
-<pre> ## 🗂️ Project Structure ``` serenity-parabank-automation/ ├── src/ │ ├── main/java/ # Page objects, utilities, and helpers │ └── test/java/ # Step definitions and test runners ├── build.gradle # Gradle build configuration ├── serenity.properties # Serenity framework config ├── settings.gradle # Gradle project settings ├── gradlew # Unix Gradle wrapper script ├── gradlew.bat # Windows Gradle wrapper script ├── build/ # Gradle build output ├── target/ # Serenity reports and test results └── README.md # Project documentation ``` </pre>
+## 🗂️ Project Structure 
+
+serenity-parabank-automation/
+├── build.gradle
+├── serenity.properties
+├── src/
+│   ├── main/
+│   │   └── java/
+│   │       └── com.parabank.automation/
+│   │           └── ui/              ← Page Objects
+│   └── test/
+│       ├── java/
+│       │   └── com.parabank.automation/
+│       │       ├── features/        ← Feature files
+│       │       ├── runners/         ← Test runners
+│       │       ├── stepdefinitions/ ← Step defs
+│       │       └── tasks/           ← Screenplay tasks
+│       └── resources/
+│           └── features/            ← .feature files
+
+---
 
 ## 🚀 Getting Started
 
