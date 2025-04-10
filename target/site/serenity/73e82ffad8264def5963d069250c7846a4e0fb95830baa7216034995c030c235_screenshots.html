@@ -128,9 +128,9 @@
             <span class="breadcrumbs">
                 <a href="index.html">Home</a>
                 > <span class="truncate-40"><a
-                    href="83f6679d20705c4d2fe60d958c7694f289478bda7a9f3a9ac9cbf7ba86966dfb.html">Login</a></span>
+                    href="51648b80f44d569aa6304ca39d6b922363c61c9a3714bc06dbc4ce758b192aa6.html">Accounts Overview</a></span>
                 > <span class="truncate-60"><a
-                    href="5e0689edb733f456fb61395572067fbd9deee00c3f0434798b8eaac13fbf5688.html">Successful login with valid credentials </a></span>
+                    href="73e82ffad8264def5963d069250c7846a4e0fb95830baa7216034995c030c235.html">View account balances and details </a></span>
                 > Screenshots
             </span>
         </div>
@@ -155,7 +155,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 09-04-2025 15:07</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 10-04-2025 16:20</span>
     <br style="clear:left"/>
 </div>
 
@@ -171,14 +171,12 @@
                             <div>
                                 <h3 class="discreet-story-header">
                                     <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
-                                    <span class="story-header-title">Login To Parabank </span>
+                                    <span class="story-header-title">Accounts Overview</span>
                                     <span class="badge tag-badge" style="">Feature</span>
                                 </h3>
 
                                 <div class="discreet-requirement-narrative-title">
-                                As a registered ParaBank user<br />
-I want to log in with my username and password<br />
-So that I can access my account dashboard
+                                
                                 </div>
                             </div>
 
@@ -186,7 +184,13 @@ So that I can access my account dashboard
                         <td valign="top" align="right">
                             <p class="tag">
                                 <span class="badge tag-badge" style="background:default;"
-                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="6c5512236937b92cd7a296b24edb966c2bd94be46b8910f8b129a42d6150eb25.html">1 To 10 Seconds
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="a41e4de811c15cfd13092564541eadae4b519dc6f6f28631348028eb51054411.html">Open Account
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="34658a1663fcf042bd7acb3325affbe4e647c8acd84d0228be2f52e1381e61b9.html">10 To 30 Seconds
                                         (Duration)
                                 </a>
                                 </span>
@@ -199,9 +203,9 @@ So that I can access my account dashboard
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-x-circle-fill failure-icon fa-2x' title='FAILURE'></i></a></span>
                             <span class="test-case-title">
-                                <span class="success-color">Successful login with valid credentials
+                                <span class="failing-color">View account balances and details
                                     <span class="related-issue-title"></span>
                                 </span>
                             </span>
@@ -218,26 +222,65 @@ So that I can access my account dashboard
 
     <div id="beforetable"></div>
     <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">Assertion error: Expected: an element that is visible but: no matching element found by [Account Overview TABLE located with: xpath: table[id='accountTable']]</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall"
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="bi bi-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-overall">
+            <div class="card">
+                <div class="card-header">
+                    <h4>java.lang.AssertionError </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>com.parabank.automation.questions.AccountOverviewVisible.lambda$onPage$0(AccountOverviewVisible.java:23)<br />com.parabank.automation.stepdefinitions.AccountsOverviewStepDefinitions.shouldSeeAccountList(AccountsOverviewStepDefinitions.java:22)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)<br /></pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+                    <div class="panel-body">
+                        <a href="pagesource12554571308930385819.html" target="_blank" class="btn btn-info">HTML Source</a>
+                    </div>
+            </div>
         <div class="slider-wrapper theme-default">
             <div id="slider">
-                <img src="7b22c75eb370386712b841978eded29f5f926f61d9ecb2e95e87d11f7f42a624.png" title=" Given the user is on the ParaBank login page" width="0"/>
-                <img src="7b22c75eb370386712b841978eded29f5f926f61d9ecb2e95e87d11f7f42a624.png" title=" User opens the browser at https://parabank.parasoft.com/parabank/index.htm" width="0"/>
-                <img src="d03261afb0bed174244da293be49f1b5f9bcbb023da8d3ed1d5ae42b9672c29f.png" title=" User opens the browser at https://parabank.parasoft.com/parabank/index.htm (completed)" width="0"/>
-                <img src="d03261afb0bed174244da293be49f1b5f9bcbb023da8d3ed1d5ae42b9672c29f.png" title=" Given the user is on the ParaBank login page (completed)" width="0"/>
-                <img src="c204e0e983d2b4b92064f9faeeb63ddcf9fa7141e706c052433542a3d27bc24d.png" title=" When the user logs in with username &quot;shiwi&quot; and password &quot;India@123&quot;" width="0"/>
-                <img src="c204e0e983d2b4b92064f9faeeb63ddcf9fa7141e706c052433542a3d27bc24d.png" title=" User login" width="0"/>
-                <img src="c204e0e983d2b4b92064f9faeeb63ddcf9fa7141e706c052433542a3d27bc24d.png" title=" User enters 'shiwi' into username field" width="0"/>
-                <img src="5445f27079b59d8d8be6fb0ae4a5b59c3cccaa898eb5b5f09e4d6a28253f78f0.png" title=" User enters 'shiwi' into username field (completed)" width="0"/>
-                <img src="5445f27079b59d8d8be6fb0ae4a5b59c3cccaa898eb5b5f09e4d6a28253f78f0.png" title=" User enters 'India@123' into password field" width="0"/>
-                <img src="716c01e93dd7756429996f5a34a1041aac6b12878cf5df285f6097fdb94e9a84.png" title=" User enters 'India@123' into password field (completed)" width="0"/>
-                <img src="716c01e93dd7756429996f5a34a1041aac6b12878cf5df285f6097fdb94e9a84.png" title=" User clicks on login button" width="0"/>
-                <img src="678285987c91242e4ff826efc902282289fab5edabc256e0715d931b09814575.png" title=" User clicks on login button (completed)" width="0"/>
-                <img src="678285987c91242e4ff826efc902282289fab5edabc256e0715d931b09814575.png" title=" User login (completed)" width="0"/>
-                <img src="678285987c91242e4ff826efc902282289fab5edabc256e0715d931b09814575.png" title=" When the user logs in with username &quot;shiwi&quot; and password &quot;India@123&quot; (completed)" width="0"/>
-                <img src="01ce67ed17bd871bf024e86280b8ad804370ab90b4aac163163f994e70470a74.png" title=" Then the user should see the account overview page" width="0"/>
-                <img src="01ce67ed17bd871bf024e86280b8ad804370ab90b4aac163163f994e70470a74.png" title=" Then visibility of Account Overview title should be (true)" width="0"/>
+                <img src="7b22c75eb370386712b841978eded29f5f926f61d9ecb2e95e87d11f7f42a624.png" title=" Given John is logged into the ParaBank application" width="0"/>
+                <img src="7b22c75eb370386712b841978eded29f5f926f61d9ecb2e95e87d11f7f42a624.png" title=" John opens the browser at https://parabank.parasoft.com/parabank/index.htm" width="0"/>
+                <img src="6914c409f66035f716c69ae5697bf74075b33a39bd52dfb0b86ae02c933f6ae8.png" title=" John opens the browser at https://parabank.parasoft.com/parabank/index.htm (completed)" width="0"/>
+                <img src="6914c409f66035f716c69ae5697bf74075b33a39bd52dfb0b86ae02c933f6ae8.png" title=" John login" width="0"/>
+                <img src="6914c409f66035f716c69ae5697bf74075b33a39bd52dfb0b86ae02c933f6ae8.png" title=" John enters 'shiwi' into username field" width="0"/>
+                <img src="4f49e6b4eef81d02ec24876aa42cd5100a36a1f752a319be821a322681674632.png" title=" John enters 'shiwi' into username field (completed)" width="0"/>
+                <img src="4f49e6b4eef81d02ec24876aa42cd5100a36a1f752a319be821a322681674632.png" title=" John enters 'India@123' into password field" width="0"/>
+                <img src="2ca02b37913fc51866d1da00bc3909945b44a9b6afe79371da645ead06ab1e44.png" title=" John enters 'India@123' into password field (completed)" width="0"/>
+                <img src="2ca02b37913fc51866d1da00bc3909945b44a9b6afe79371da645ead06ab1e44.png" title=" John clicks on login button" width="0"/>
+                <img src="60f5ca86161534a7fdf6a17af0f56b3e2ce49e73b60022c77c63215e0419fbcc.png" title=" John clicks on login button (completed)" width="0"/>
+                <img src="60f5ca86161534a7fdf6a17af0f56b3e2ce49e73b60022c77c63215e0419fbcc.png" title=" John login (completed)" width="0"/>
+                <img src="60f5ca86161534a7fdf6a17af0f56b3e2ce49e73b60022c77c63215e0419fbcc.png" title=" Given John is logged into the ParaBank application (completed)" width="0"/>
+                <img src="4a585052124a5d08d14eeab57c5fe91a497e72ddb28518a95660eb979d951d01.png" title=" When he navigates to the Accounts Overview page" width="0"/>
+                <img src="4a585052124a5d08d14eeab57c5fe91a497e72ddb28518a95660eb979d951d01.png" title=" John navigate to accounts overview" width="0"/>
+                <img src="4a585052124a5d08d14eeab57c5fe91a497e72ddb28518a95660eb979d951d01.png" title=" John clicks on Accounts Overview link" width="0"/>
+                <img src="4a585052124a5d08d14eeab57c5fe91a497e72ddb28518a95660eb979d951d01.png" title=" John navigate to accounts overview (completed)" width="0"/>
+                <img src="4a585052124a5d08d14eeab57c5fe91a497e72ddb28518a95660eb979d951d01.png" title=" When he navigates to the Accounts Overview page (completed)" width="0"/>
+                <img src="4a585052124a5d08d14eeab57c5fe91a497e72ddb28518a95660eb979d951d01.png" title=" Then he should see a list of accounts with balances" width="0"/>
+                <img src="5756413f134dcf772c7284220fdd15eef3114b4321d918fc3d77d18bcaaf9092.png" title=" Then Accounts are visible" width="0"/>
 
-                <img src="01ce67ed17bd871bf024e86280b8ad804370ab90b4aac163163f994e70470a74.png" title=" Then the user should see the account overview page (completed): <span class='success-color'>SUCCESS</span>" width="0"/>
+                <img src="60f5ca86161534a7fdf6a17af0f56b3e2ce49e73b60022c77c63215e0419fbcc.png" title=" Then Accounts are visible (completed): <span class='failing-color'>FAILURE</span>" width="0"/>
             </div>
         </div>
 
