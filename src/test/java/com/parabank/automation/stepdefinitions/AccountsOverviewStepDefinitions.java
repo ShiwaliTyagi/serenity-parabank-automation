@@ -1,6 +1,7 @@
 package com.parabank.automation.stepdefinitions;
 
 import com.parabank.automation.context.TestContext;
+import com.parabank.automation.questions.AccountRowsAreComplete;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import com.parabank.automation.tasks.NavigateToAccountsOverview;
@@ -21,6 +22,13 @@ public class AccountsOverviewStepDefinitions {
     public void shouldSeeAccountList() {
         TestContext.getInstance().getActor().should(
                 seeThat("Accounts are visible", AccountOverviewVisible.onPage())
+        );
+    }
+
+    @Then("each account row should have non-empty values")
+    public void accountRowsShouldNotBeEmpty() {
+        TestContext.getInstance().getActor().should(
+                seeThat("Account rows have complete data", AccountRowsAreComplete.check())
         );
     }
 }

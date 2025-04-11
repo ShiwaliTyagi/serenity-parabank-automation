@@ -9,4 +9,7 @@ public class AccountOverviewPage {
 
     public static final Target OVERVIEW_TABLE = Target.the("Account Overview TABLE")
             .located(By.xpath("table[id='accountTable']"));
+
+    public static final Target ACCOUNT_ROWS = Target.the("account table rows")
+            .located(By.cssSelector("#accountTable tbody tr"));
 }
