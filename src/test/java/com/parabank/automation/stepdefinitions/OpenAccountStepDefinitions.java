@@ -2,6 +2,7 @@ package com.parabank.automation.stepdefinitions;
 import com.parabank.automation.questions.NewlyOpenedAccount;
 import com.parabank.automation.tasks.Login;
 import com.parabank.automation.tasks.OpenNewAccount;
+import com.parabank.automation.userinterfaces.AccountOverviewPage;
 import com.parabank.automation.userinterfaces.OpenAccountPage;
 import io.cucumber.java.en.*;
 import com.parabank.automation.context.TestContext;
@@ -21,6 +22,15 @@ public class OpenAccountStepDefinitions {
                 Open.url("https://parabank.parasoft.com/parabank/index.htm"),
                 Login.withCredentials("shiwi", "India@123")
         );
+        // Wait and extract the first account number dynamically
+        String accountId = AccountOverviewPage.FIRST_ACCOUNT_LINK
+                .resolveFor(TestContext.getInstance().getActor())
+                .getText();
+        TestContext.getInstance().set("defaultAccountId", accountId);
+        // Log it in Serenity report
+        Serenity.recordReportData()
+                .withTitle("Default Account ID")
+                .andContents(accountId);
     }
 
     @When("he opens a new Savings account with a source account")

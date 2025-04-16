@@ -3,8 +3,10 @@ package com.parabank.automation.stepdefinitions;
 import com.parabank.automation.questions.AccountOverviewVisible;
 import com.parabank.automation.tasks.Login;
 import io.cucumber.java.en.*;
+import net.serenitybdd.core.Serenity;
 import net.serenitybdd.screenplay.actions.Open;
 import com.parabank.automation.context.TestContext;
+import com.parabank.automation.userinterfaces.AccountOverviewPage;
 
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
@@ -24,7 +26,15 @@ public class LoginStepDefinitions {
         TestContext.getInstance().getActor().attemptsTo(
                 Login.withCredentials(username, password)
         );
-
+        // Wait and extract the first account number dynamically
+        String accountId = AccountOverviewPage.FIRST_ACCOUNT_LINK
+                .resolveFor(TestContext.getInstance().getActor())
+                .getText();
+        TestContext.getInstance().set("defaultAccountId", accountId);
+        // Log it in Serenity report
+        Serenity.recordReportData()
+                .withTitle("Default Account ID")
+                .andContents(accountId);
     }
 
     @Then("the user should see the account overview page")

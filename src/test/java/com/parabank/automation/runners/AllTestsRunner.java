@@ -16,7 +16,7 @@ import org.junit.runner.RunWith;
                 "com.parabank.automation.stepdefinitions",
                 "com.parabank.automation.hooks"
         },
-        tags = "@fundtransactions", // optional: run all or filter by tags
+        tags = "@FundTransfer", // optional: run all or filter by tags
         publish = true,
         monochrome = true
 )
