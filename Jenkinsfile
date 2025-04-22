@@ -28,11 +28,9 @@ pipeline {
 
     post {
         always {
-            node {
-                echo "Archiving Serenity reports..."
-                junit '**/target/site/serenity/serenity-junit-results/*.xml'
-                archiveArtifacts artifacts: '**/target/site/serenity/**/*.*', fingerprint: true
-            }
+            echo "Archiving Serenity reports..."
+            junit '**/target/site/serenity/serenity-junit-results/*.xml'
+            archiveArtifacts artifacts: '**/target/site/serenity/**/*.*', fingerprint: true
         }
         failure {
             echo "Build failed! Check the Serenity Report for test failure details."
